@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Document</title>
+
+
+        <script type="text/javascript "src="jquery/jq.js">
+           </script>
+        
+        <style type="text/css">
+        .big{
+            font-size: 30px;
+        }
+        .small{
+            font-size: 30px;
+        }
+        #blue{
+            color:rgb(66, 27, 240);
+            background-color: yellow;
+        }
+        #red{
+            color: red;
+            background-color: rgb(184, 244, 6);
+        }
+        #pink{
+            color: pink;
+            background-color: beige;
+        }
+        #orange{
+            color: orange;
+            background-color: antiquewhite;
+        }
+        #submit{
+            background-color: aqua;
+        }
+        #display{
+            width: 100px;
+            height: 100px;
+            font-size: 150px;
+        }
+        
+
+
+        </style>
+        
+      
+
+
+ </head>
+ <body>
+    <h1>Ceylon Tech Educational Center</h1>
+    <button id="blue" class="big">About</button>
+    <button id="red" class="big">Student ID</button>
+    <button id="pink" class="big">Contact Us</button>
+    <button id="orange" class="small">Downloads</button>
+
+<script>
+    $('#red').click(function(){
+        alert('This is red one');
+    });
+
+    $('#pink').click(function(){
+        $('button:not(#pink)').hide();
+    });
+
+    $(function(){
+        $('#submit').click(function(){
+            var txt =$('#textbox').val();
+            $('#display').html(txt);
+            $('textbox').val('');
+        });
+    });
+
+
+
+
+</script>
+<br>
+<br>
+<br>
+<input id="textbox" type="text">
+<button id="submit">Submit</button>
+<div id="display"></div>
+
+</body>
+
+
+
+ </body>
+
+
+
+
+
+</html>
